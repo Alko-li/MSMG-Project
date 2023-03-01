@@ -370,7 +370,7 @@ to make-garrison [number garrison-patches spawn-point]
   ask spawn-point [
     sprout-marines 15 [
       set color cyan
-      ifelse random 2 = 1 [
+      ifelse random  > 0.5 [
         set patrol? false
       ]
       [
